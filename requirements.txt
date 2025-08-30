@@ -1,0 +1,4 @@
+PyQt6
+requests
+
+pip install -r requirements.txt
