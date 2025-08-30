@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+virtualenv/
+build/
+dist/
+*.egg-info/
+
+# Compiled C libraries (optional to exclude)
+math_ops.so
+math_ops.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
