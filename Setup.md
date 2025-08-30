@@ -21,3 +21,57 @@ A high-performance **scientific calculator** powered by **C** for math operation
 ```bash
 git clone https://github.com/Galil-ux/scientific-calculator.git
 cd scientific-calculator
+
+🛠️ Prerequisites
+Before running, ensure you have:
+
+Python 3.8 or higher → python.org
+A C compiler:
+Linux/macOS: gcc (install via sudo apt install build-essential or xcode-select --install)
+Windows: MinGW-w64 or TDM-GCC
+Internet connection (for currency exchange rates)
+
+📦 Install Dependencies
+bash
+1. pip install PyQt6 requests
+💡 Tip: Use a virtual environment! 
+
+bash
+1. python -m venv venv
+2. source venv/bin/activate    # Linux/macOS
+3.# or
+4. venv\Scripts\activate       # Windows
+🔧 Compile the C Extension
+This project uses C for fast math operations. You must compile math_ops.c into a shared library.
+
+On Linux/macOS:
+bash
+1. gcc -fPIC -shared -o math_ops.so math_ops.c -lm
+On Windows (MinGW):
+bash
+1. gcc -shared -o math_ops.dll math_ops.c -lm
+✅ This creates:
+
+math_ops.so (Linux/macOS)
+math_ops.dll (Windows)
+⚠️ Make sure the compiled file is in the same directory as calculator.py. 
+
+▶️ Run the Application
+bash
+1. python calculator.py
+🎉 The app will launch with two tabs:
+
+Scientific Calculator – C-powered math
+Currency Converter – Real-time rates from exchangerate-api.com
+ 
+
+💱 Currency Converter
+Select From and To currencies
+Enter an amount
+Click Convert
+🌐 Uses free API: https://api.exchangerate-api.com/v4/latest/USD
+🔁 Rates update on app startup
+
+📄 License
+MIT © Galil-ux
+See LICENSE for details.
