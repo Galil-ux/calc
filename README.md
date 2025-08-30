@@ -1,2 +1,0 @@
-# calc
-calculator in c
